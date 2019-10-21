@@ -42,7 +42,7 @@ enum LineStyle : Int {
 	static func styleFromString(_ string : String ) -> LineStyle {
 		if string == "**" || string == "__" {
 			return .bold
-		} else if string == "*" || string == "_" {
+		} else if string == "*" {
 			return .italic
 		} else if string == "`" {
 			return .code
@@ -95,7 +95,7 @@ enum LineStyle : Int {
 	
 	
 	let string : String
-	let instructionSet = CharacterSet(charactersIn: "[\\*_`")
+	let instructionSet = CharacterSet(charactersIn: "[\\*`")
 	
 	/**
 	
